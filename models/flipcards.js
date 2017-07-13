@@ -43,11 +43,18 @@ UserSchema.methods.comparePassword = function(candidatePassword, cb) {
 // question: String, required
 // answer: String, required
 
-var flipcardSchema = new mongoose.Schema({
-    deck: { type: String, required: true },
-    question: String,
-    answer: String
-});
+var flipcardSchema = new mongoose.Schema(
+  {
+    deckName: { type: String, required: true },
+    cards:
+      [
+        {
+          question: String,
+          answer: String
+        }
+      ]
+  }
+);
 
 const User = mongoose.model('User', UserSchema);
 const Flipcard = mongoose.model('Flipcard', flipcardSchema);
