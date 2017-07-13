@@ -1,0 +1,8 @@
+{
+  "development": {
+    "mongoURL": "mongodb://localhost:27017/flipcard"
+  },
+  "test": {
+    "mongoURL": "mongodb://localhost:27017/flipcard_test"
+  }
+}
